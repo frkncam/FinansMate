@@ -1,4 +1,4 @@
-package com.FinansMate.FinansMate.Controller;
+package com.FinansMate.FinansMate.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
