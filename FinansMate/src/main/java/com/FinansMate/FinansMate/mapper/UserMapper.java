@@ -8,7 +8,7 @@ import org.mapstruct.factory.Mappers;
 @Mapper
 public interface UserMapper {
 
-  UserMapper Instance = Mappers.getMapper(UserMapper.class);
+  UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
 
   MyUser userRequestToUser(RegisterRequest userRequest);
 }

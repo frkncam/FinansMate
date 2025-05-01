@@ -26,7 +26,7 @@ public class UserServiceImpl implements UserService {
       throw new EmailAlreadyExistsException("Email already exists");
     }
 
-    MyUser user = UserMapper.Instance.userRequestToUser(userRequest);
+    MyUser user = UserMapper.INSTANCE.userRequestToUser(userRequest);
     user.setPassword(passwordEncoder.encode(userRequest.getPassword()));
     user.setRole(Role.USER);
 
