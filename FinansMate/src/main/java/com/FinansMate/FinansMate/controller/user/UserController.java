@@ -2,6 +2,7 @@ package com.FinansMate.FinansMate.controller.user;
 
 import com.FinansMate.FinansMate.dto.user.RegisterRequest;
 import com.FinansMate.FinansMate.service.user.UserService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,7 +17,7 @@ public class UserController {
   private final UserService userService;
 
   @PostMapping("/register")
-  public String register(@RequestBody RegisterRequest registerRequest) {
+  public String register(@RequestBody @Valid RegisterRequest registerRequest) {
     userService.save(registerRequest);
     return "User registered successfully";
   }
