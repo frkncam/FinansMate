@@ -1,5 +1,7 @@
 package com.FinansMate.FinansMate.controller.user;
 
+import com.FinansMate.FinansMate.dto.user.LoginRequest;
+import com.FinansMate.FinansMate.dto.user.LoginResponse;
 import com.FinansMate.FinansMate.dto.user.RegisterRequest;
 import com.FinansMate.FinansMate.service.user.UserService;
 import jakarta.validation.Valid;
@@ -20,5 +22,10 @@ public class UserController {
   public String register(@RequestBody @Valid RegisterRequest registerRequest) {
     userService.save(registerRequest);
     return "User registered successfully";
+  }
+
+  @PostMapping("/login")
+  public LoginResponse login(@RequestBody LoginRequest loginRequest) {
+    return userService.login(loginRequest);
   }
 }
