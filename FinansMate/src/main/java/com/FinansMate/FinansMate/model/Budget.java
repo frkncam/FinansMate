@@ -16,7 +16,10 @@ public class Budget extends BaseEntity {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
+  @Column(name = "month")
   private int month;
+
+  @Column(name = "year")
   private int year;
 
   private BigDecimal totalBudget;
