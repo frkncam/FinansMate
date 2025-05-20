@@ -19,7 +19,7 @@ public class TransactionResponse {
     private TransactionType type;
     private LocalDate date;
     private String description;
-    //private Long categoryId;
+    private Long categoryId;
     private Long userId;
     private Currency currency;
 }

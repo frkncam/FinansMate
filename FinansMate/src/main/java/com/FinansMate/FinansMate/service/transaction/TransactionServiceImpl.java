@@ -54,7 +54,7 @@ public class TransactionServiceImpl implements TransactionService {
                 transaction.getType(),
                 transaction.getDate(),
                 transaction.getDescription(),
-    //            transaction.getCategory().getId(),
+                transaction.getCategory().getId(),
                 transaction.getUser().getId(),
                 transaction.getCurrency()
         );
@@ -70,7 +70,7 @@ public class TransactionServiceImpl implements TransactionService {
                         transaction.getType(),
                         transaction.getDate(),
                         transaction.getDescription(),
-                 //       transaction.getCategory().getId(),
+                        transaction.getCategory().getId(),
                         transaction.getUser().getId(),
                         transaction.getCurrency()
                 ))
