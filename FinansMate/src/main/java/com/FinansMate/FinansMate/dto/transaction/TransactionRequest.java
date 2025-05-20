@@ -27,8 +27,8 @@ public class TransactionRequest {
 
     private String description;
 
-//    @NotNull
-//    private Long categoryId;
+    @NotNull
+    private Long categoryId;
 
     @NotNull
     private Long userId;
